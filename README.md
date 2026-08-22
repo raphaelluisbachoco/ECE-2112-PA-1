@@ -25,14 +25,6 @@ def rotate_word(word):
     return word[1:] + word [0]
 ```
 
-
-
-
-
-
-
-
-
 # 2. Username Builder Problem
 >Create a function named make username() that accepts two strings: first name and last name. The
 function must:
@@ -41,12 +33,20 @@ function must:
 >3. remove all spaces from the last name; and
 >4. join the processed first and last names using one period (.).
 
+The username problem requires two strings to be converted to lowercase letters while also joining both `firstname` and `lastname` 
 
+to convert all letters to lowercase we can use `lower()` to erase any capital letters and we can use `replace(" ","")` to remove the spaces between the 
+strings
 
+to see our final output and to combine both strings we can use `return` as well as `+` to join the `firstname` and `lastname` together and to satisfy condition 4 we can use `+ "."` to add a `.` between the processed first and last name.
 
+In essence `firstname.lower().replace(" ","")` represents the `firstname` in lowercase letters and removes all the spaces in the first name, ` + "." ` completes condition 4 and `+ lastname.lower().replace(" ", "")` is the `lastname` in lowercase and removes spaces in between as well.
 
-
-
+Username Builder function:
+```
+def make_username(firstname, lastname):
+  return firstname.lower().replace(" ","") + "." + lastname.lower().replace(" ", "")
+```
 
 
 # 3. BOOKEND SWAP PROBLEM
@@ -60,3 +60,4 @@ function must:
 
 ## History
 - August 21, 2026 - File Created
+- August 22, 2026 - Created Solution for Problem 2

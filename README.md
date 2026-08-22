@@ -73,6 +73,6 @@ def swap_bookends(items):
 ```
 
 ## History
-- August 21, 2026 - File Created
+- August 21, 2026 - File Created, Created Solution for Problem 1
 - August 22, 2026 - Created Solution for Problem 2
 - August 23, 2026 - Created Solution for Problem 3

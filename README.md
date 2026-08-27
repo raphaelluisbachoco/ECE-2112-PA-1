@@ -12,8 +12,18 @@ SY: 2026-2027
 
 To solve the following problem basic string slicing and indexing must be done to create a function that manages to shift the characters to the left by 1 index value. 
 
+
+First we define the fucntion to be use in the problem which would be:
+
+```
+def rotate_word(word):
+```
+
+
 When counting the index value of a string, The values will start at `0` and increase by increments of `1`. Essentially we can assign index values to each character in each string for example the word `dog`
 of which the values will be `d = 0`, `o = 1` and `g = 2` respectively.
+
+
 
 By making use of the fact that `word[0]` starts at the original index value which would be the first character of the string, we can use `word[1:]` to slice the string and reconnect it with `word[0]`, such as `word[1:] + word[0]`. 
 

@@ -20,10 +20,12 @@ def rotate_word(word):
 ```
 
 
-When counting the index value of a string, The values will start at `0` and increase by increments of `1`. Essentially we can assign index values to each character in each string for example the word `dog`
-of which the values will be `d = 0`, `o = 1` and `g = 2` respectively.
+When counting the index value of a string, The values will start at `0` and increase by increments of `1`. Essentially we can assign index values to each character in each string for example the word `dog` of which the values will be `d = 0`, `o = 1` and `g = 2` respectively.
 
-
+Next we should start with the following:
+```
+word[1:] + word[0]
+```
 
 By making use of the fact that `word[0]` starts at the original index value which would be the first character of the string, we can use `word[1:]` to slice the string and reconnect it with `word[0]`, such as `word[1:] + word[0]`. 
 
@@ -86,3 +88,4 @@ def swap_bookends(items):
 - August 21, 2026 - File Created, Created Solution for Problem 1
 - August 22, 2026 - Created Solution for Problem 2
 - August 23, 2026 - Created Solution for Problem 3, Uploaded Jupyter Notebook
+- August 27, 2026 - Updated README and Jupyter Notebook

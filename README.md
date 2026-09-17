@@ -15,7 +15,7 @@ To solve the following problem basic string slicing and indexing must be done to
 
 First we define the fucntion to be use in the problem which would be:
 
-```
+```python
 def rotate_word(word):
 ```
 
@@ -23,7 +23,7 @@ def rotate_word(word):
 When counting the index value of a string, The values will start at `0` and increase by increments of `1`. Essentially we can assign index values to each character in each string for example the word `dog` of which the values will be `d = 0`, `o = 1` and `g = 2` respectively.
 
 Next we should start with the following:
-```
+```python
 word[1:] + word[0]
 ```
 
@@ -32,7 +32,7 @@ By making use of the fact that `word[0]` starts at the original index value whic
 This works since we are basically slicing the string at its beginning and reconnecting it at the end of the string. For example in the word `dog`, the expression `word[1:]` would be any character equal to and above the index value of `1` and `word[0]` is the first character of the string. Hence when used as `word[1:] + word [0]` the end result would be `ogd`. It should also be noted that any capitalization of characters used will also carry over as they are not affected.
 
 Word Rotation function:
-```
+```python
 def rotate_word(word):
     return word[1:] + word [0]
 ```
@@ -49,21 +49,21 @@ The username problem requires two strings to be converted to lowercase letters w
 
 To convert all letters to lowercase we can use `lower()` to erase any capital letters.
 
-```
+```python
 lower()
 ```
 
 And we can use `replace(" ","")` to remove the spaces between the strings
 
 
-```
+```python
 replace(" ","")
 ```
 
 To see our final output and to combine both strings we can use `return` as well as `+` to join the `firstname` and `lastname` together and to satisfy condition 4 we can use `+ "."` to add a `.` between the processed first and last name.
 
 
-```
+```python
 return firstname.lower().replace(" ","") + "." + lastname.lower().replace(" ", "")
 ```
 
@@ -71,7 +71,7 @@ return firstname.lower().replace(" ","") + "." + lastname.lower().replace(" ", "
 In essence `firstname.lower().replace(" ","")` represents the `firstname` in lowercase letters and removes all the spaces in the first name, ` + "." ` completes condition 4 and `+ lastname.lower().replace(" ", "")` is the `lastname` in lowercase and removes spaces in between as well.
 
 Username Builder function:
-```
+```python
 def make_username(firstname, lastname):
   return firstname.lower().replace(" ","") + "." + lastname.lower().replace(" ", "")
 ```
@@ -86,7 +86,7 @@ def make_username(firstname, lastname):
 The approach to this problem is to extract certain elements and be able to swap both the first element and last elements.
 
 First we must define and separate the list into three parts namely `first` `middle` and `last`
-```
+```python
 def swap_bookends(items):
 ```
 
@@ -94,7 +94,7 @@ def swap_bookends(items):
 for instance `first` would indicate the first element, `last` for the last element and `*middle` which would be any element in the middle of the list. 
 Note that we are not separating the middle part into more detailed parts since they will remain unchanged in their order.
 
-```
+```python
 first, *middle, last = items
 ```
 
@@ -104,12 +104,12 @@ Using `*middle` allows us to bypass certain conditions namely when the list only
 
 By assigning the first element to `first` and the last element to `last` we can change their orientation in the list by returning them using:
 
-```
+```python
  return [last] + middle + [first]
 ```
 
 Bookend Swap function:
-```
+```python
 def swap_bookends(items):
     first, *middle, last = items
     return [last] + middle + [first]
@@ -120,3 +120,4 @@ def swap_bookends(items):
 - August 22, 2026 - Created Solution for Problem 2
 - August 23, 2026 - Created Solution for Problem 3, Uploaded Jupyter Notebook
 - August 27, 2026 - Updated README and Jupyter Notebook
+- September 17, 2026 - Updated Formatting 
